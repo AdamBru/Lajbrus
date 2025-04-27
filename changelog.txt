@@ -1,0 +1,14 @@
+v1.3
+	- dodanie modułu Uczniowie, wyświetlającego listę uczniów
+
+v1.2
+	- wyświetlanie danych o użytkowniku w panelu (dashboard?view=home; dashboard?view=personal)
+	- dodanie modułu zmiany hasła
+	- doadnie ustawień wyglądu (motyw, rozmiar czcionki)
+
+v1.1
+	- logowanie
+
+v1.0
+	- Pierwszy design
+	- Pierwsze skrypty dołączania fragmentów kodu (require_once)

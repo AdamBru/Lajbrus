@@ -1,0 +1,1 @@
+// przenies skryp resjestracji do tego pliku

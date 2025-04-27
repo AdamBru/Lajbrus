@@ -1,0 +1,145 @@
+header {
+	width: 100%;
+	height: 5rem;
+	flex-shrink: 0;
+	background-color: var(--color-main);
+	position: relative;
+	padding: 5px;
+	padding-right: 15px;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+header p {
+	width: fit-content;
+	color: var(--color-text);
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	flex-wrap: wrap;
+	flex: 1;
+}
+
+header p span {
+	display: inline-block;
+	color: var(--color-text-contrast);
+}
+
+header img {max-height: 100%;}
+
+header a:has(img) {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+header a:has(img) span {
+	color: var(--color-text-contrast);
+	margin: 0 10px;
+}
+
+.current-view-title {
+	background-color: var(--color-aside);
+	color: #333;
+	/* color: var(--color-text); */
+	padding: 5px 15px;
+}
+
+span.cvt-text {
+	color: var(--color-text);
+	opacity: 85%;
+}
+
+span.spacer {
+	padding: 0 1rem;
+	color: var(--color-text);
+	font-size: 1.4rem;
+	line-height: 1.2rem;
+	position: relative;
+	bottom: -.2rem;
+}
+span.spacer::after {content: '/';}
+
+/* retro glossy style, tak dla beki se tu zostało */
+/* header::after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	content: '';
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.2)50%, rgba(255, 255, 255, 0.7)100%); 
+} */
+
+footer {
+	width: 100%;
+	height: 2rem;
+	flex-shrink: 0;
+	background-color: var(--color-aside);
+	padding: 0 10px;
+	font-weight: 300;
+	font-size: .9rem;
+
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+}
+
+footer a.footerRight {
+	display: flex;
+	align-items: center;
+}
+
+footer a {
+	text-decoration: underline !important;
+	height: 100%;
+}
+
+footer a:hover {
+	font-weight: 400;
+}
+
+footer button {
+	height: 100%;
+	width: 1.5rem;
+	background: url(../assets/images/gear.svg) center center / contain no-repeat;
+	border: none;
+	cursor: pointer;
+}
+
+@media (max-width: 768px) {
+	footer {
+		font-size: 1.05rem;
+		height: 2.5rem;
+	}
+
+	header p {
+		flex-direction: column;
+		justify-content: center;
+		align-items: end;
+		flex-wrap: nowrap;
+		margin-right: 10px;
+	}
+
+	header a:has(img) {
+		flex-direction: column;
+		align-items: left;
+		position: relative;
+		margin-left: 5px;
+	}
+
+	header a:has(img) span {
+		background-color: var(--color-main);
+		position: relative;
+	}
+
+	header {
+		padding: 5px 0 15px 0;
+		border-bottom: 1.4rem solid var(--color-main);
+		box-sizing: content-box;
+	}
+
+}

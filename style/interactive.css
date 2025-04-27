@@ -1,0 +1,8 @@
+.btn {
+	background-color: var(--color-main);
+	padding: 1rem 3rem;
+}
+
+.btn:hover {
+	opacity: 85%;
+}

@@ -1,0 +1,245 @@
+/* tabela w modalu */
+.modal table {
+	width: 100%;
+}
+
+.modal tr {
+	min-height: 1.7rem;
+}
+
+.modal th {
+	font-weight: 400 !important;
+	padding: .5rem 0;
+	text-align: left;
+	width: 50%;
+}
+
+.modal td {
+	padding: .5rem 0;
+	text-align: right;
+	height: 100%;
+	width: 50%;
+	
+}
+
+.modal input[type="radio"] {
+	display: none;
+}
+
+.modal label {
+	padding: 0 .5rem;
+	cursor: pointer;
+	position: relative;
+	padding: 5px 8px;
+	/* height: 100%; */
+	min-height: 26px;
+}
+
+.modal input[type="radio"]:checked + label::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 100%;
+	border: 2px solid #555;
+	border-radius: 5px;
+}
+
+
+/* theme-demo-block */
+.modal #theme-demo-blocks {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: space-between;
+	gap: 15px;
+}
+
+	@media (max-width: 768px) {
+		.modal #theme-demo-blocks {
+			grid-template-columns: 1fr;
+			max-width: 170px;
+			margin: auto;
+		}
+	}
+
+.modal #theme-demo-blocks label {
+	height: calc(100px + 1rem + 6px);
+	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+	/* all */
+	.modal #theme-demo-blocks input + label * {
+		border: none;
+	}
+	
+	.modal #theme-demo-blocks input + label .littleTop {
+		width: 100%;
+		height: 25px;
+		border-radius: 5px 5px 0 0;
+		padding: 6px;
+	}
+
+		.modal #theme-demo-blocks input + label .littleTop::after {
+			content: '';
+			width: 40%;
+			height: 13px;
+			border-radius: 50px;
+			display: block;
+		}
+
+	.modal #theme-demo-blocks input + label .littleMain {
+		height: 55px;
+		flex: 1;
+		border-radius: 0 0 5px 0;
+		padding: 7px;
+	}
+		
+		.modal #theme-demo-blocks input + label .littleMain::after {
+			content: '';
+			width: 50%;
+			height: 13px;
+			border-radius: 50px;
+			display: block;
+		}
+
+	.modal #theme-demo-blocks input + label .littleAside {
+		width: 40px;
+		border-radius: 0 0 0 5px;
+		padding: 7px 8px;
+		line-height: 1.1rem;
+	}
+
+		.modal #theme-demo-blocks input + label .littleAside i {
+			width: 100%;
+			height: 13px;
+			border-radius: 50px;
+			display: block;
+			margin-bottom: 5px;
+			content: '';
+		}
+
+	.modal #theme-demo-blocks input + label p {
+		width: 100%;
+		margin-top: 4px;
+		text-align: center;
+		white-space: nowrap;
+	}
+
+	/* light */
+	.modal #theme-demo-blocks #light + label .littleTop {background-color: #36c;}
+
+		.modal #theme-demo-blocks #light + label .littleTop::after {background-color: #fff;}
+
+	.modal #theme-demo-blocks #light + label .littleMain {background-color: #efefef;}
+
+		.modal #theme-demo-blocks #light + label .littleMain::after {background-color: #000b;}
+
+	.modal #theme-demo-blocks #light + label .littleAside {background-color: #dedede;}
+
+		.modal #theme-demo-blocks #light + label .littleAside i {background-color: #000b;}
+
+	/* dark */
+	.modal #theme-demo-blocks #dark + label .littleTop {background-color: #14a;}
+
+		.modal #theme-demo-blocks #dark + label .littleTop::after {background-color: #fff;}
+
+	.modal #theme-demo-blocks #dark + label .littleMain {background-color: #222;}
+
+		.modal #theme-demo-blocks #dark + label .littleMain::after {background-color: #fffe;}
+
+	.modal #theme-demo-blocks #dark + label .littleAside {background-color: #191919;}
+
+		.modal #theme-demo-blocks #dark + label .littleAside i {background-color: #fffe;}
+
+	/* autoByDevice */
+	.modal #theme-demo-blocks #autoByDevice + label #autoByDevice-left, 
+	.modal #theme-demo-blocks #autoByDevice + label #autoByDevice-right {
+		width: 50%;
+	}
+
+	.modal #theme-demo-blocks #autoByDevice + label #autoByDevice-left{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	.modal #theme-demo-blocks #autoByDevice + label #autoByDevice-left .littleTop {background-color: #36c;
+		border-top-right-radius: 0;
+	}
+	.modal #theme-demo-blocks #autoByDevice + label #autoByDevice-right .littleTop {background-color: #14a;
+		border-top-left-radius: 0;
+	}
+
+		.modal #theme-demo-blocks #autoByDevice + label #autoByDevice-left .littleTop::after {background-color: #fff;
+			width: 90%;
+		}
+		.modal #theme-demo-blocks #autoByDevice + label #autoByDevice-right .littleTop::after {background-color: transparent;}
+
+	.modal #theme-demo-blocks #autoByDevice + label #autoByDevice-left .littleMain {background-color: #efefef;
+		padding-right: 0;
+		border-radius: 0;
+	}
+	.modal #theme-demo-blocks #autoByDevice + label #autoByDevice-right .littleMain {background-color: #222;
+		padding-left: 0;
+	}
+
+		.modal #theme-demo-blocks #autoByDevice + label #autoByDevice-left .littleMain::after {background-color: #000b;
+			border-radius: 50px 0 0 50px;
+			width: 100%;
+			flex: 1;
+		}
+		.modal #theme-demo-blocks #autoByDevice + label #autoByDevice-right .littleMain::after {background-color: #fffe;
+			border-radius: 0 50px 50px 0;
+		}
+
+	.modal #theme-demo-blocks #autoByDevice + label #autoByDevice-left .littleAside {background-color: #dedede;}
+	.modal #theme-demo-blocks #autoByDevice + label #autoByDevice-right .littleAside {background-color: #222;}
+
+		.modal #theme-demo-blocks #autoByDevice + label #autoByDevice-left .littleAside i {background-color: #000b;}
+		.modal #theme-demo-blocks #autoByDevice + label #autoByDevice-right .littleAside i {background-color: #fffe;}
+
+	/* highContrast */
+	.modal #theme-demo-blocks #highContrast + label .littleTop {background-color: #ff0;}
+
+		.modal #theme-demo-blocks #highContrast + label .littleTop::after {background-color: #000;}
+
+	.modal #theme-demo-blocks #highContrast + label .littleMain {background-color: #000;}
+
+		.modal #theme-demo-blocks #highContrast + label .littleMain::after {background-color: #ff0;}
+
+	.modal #theme-demo-blocks #highContrast + label .littleAside {background-color: #000;}
+
+		.modal #theme-demo-blocks #highContrast + label .littleAside i {background-color: #ff0;}
+
+	.modal #theme-demo-blocks #highContrast + label * {border: 1px solid #ff0;}
+
+	.modal #theme-demo-blocks #highContrast + label p {border: none;}
+
+/* highContrast */
+*.highContrast {
+	border: 2px solid #ff0;
+	font-weight: bold;
+}
+
+a.highContrast {
+	border: 2px solid #24f23e;
+	color: #24f23e;
+}
+
+h1.highContrast,
+p.highContrast,
+span.highContrast {
+	border: none;
+}
+
+a.highContrast p.highContrast,
+a.highContrast span.highContrast {
+	color: #24f23e;
+}
+
+#settingsButton.highContrast {
+	filter: invert(91%) sepia(30%) saturate(4020%) hue-rotate(49deg) brightness(105%) contrast(90%);
+	border: 2px solid navy;
+}

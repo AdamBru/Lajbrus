@@ -1,0 +1,108 @@
+.dashboard-container {
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+	gap: 5%;
+	padding: 5%;
+}
+
+.dashboard-container .blocks-container {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	gap: 30px;
+}
+
+/* Karta */
+.dashboard-container .block {
+	width: 230px;
+	height: 100px;
+	padding: 1rem !important;
+	color: var(--color-text-contrast);
+	font-size: 1.4rem;
+	position: relative;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+	.dashboard-container .block img {
+		height: 50px;
+		margin-left: -10px;
+	}
+
+	.dashboard-container p {
+		text-wrap: nowrap;
+	}
+
+	/* .unavilable red dot */
+	.blocks-container .block.unavilable::after {
+		content: '';
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		/* background-color: rgb(220, 0, 0); */
+		background: hsla(0, 0%, 93%, 1);
+		background: linear-gradient(135deg, rgb(211, 164, 164) 0%, rgb(241, 138, 144) 30%, hsla(356, 53%, 47%, 1) 66%);
+	}
+
+/* Panel boczny */
+.dashboard-container aside {
+	width: 220px;
+	align-self: stretch;
+	background-color: var(--color-aside); 
+	padding: 20px;
+	flex-shrink: 0;
+}
+
+	.dashboard-container aside th {
+		text-align: left;
+		padding-top: 10px;
+	}
+
+	.dashboard-container aside td {
+		padding: 0 5px;
+		line-height: 1.6rem;
+	}
+
+
+
+@media (max-width: 768px) {
+	.dashboard-container {
+		flex-direction: column;
+		align-items: center;
+		gap: 30px;
+	}
+
+	.dashboard-container .blocks-container {
+		gap: 0;
+	}
+
+	.dashboard-container .block {
+		flex-direction: column;
+		width: calc(50% - 20px);
+		height: 120px;
+		margin: 10px;
+	}
+
+	.dashboard-container .block img {
+		margin-left: 0;
+	}
+
+	.dashboard-container aside {
+		align-self: unset;
+		width: 100%;
+	}
+
+	.dashboard-container .blocks-container {
+		justify-content: center;
+	}
+}

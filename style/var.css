@@ -1,0 +1,16 @@
+:root {
+	font-family: sans-serif;
+	color: var(--color-text);
+
+	--color-main: #36c;
+	--color-bg: #f9f9f9;
+	--color-text: #000;
+	--color-text-contrast: #fff;
+	--color-aside: #eee;
+	--color-table-a: #eee;
+	--color-table-b: #dfdfdf;
+}
+
+:root * {
+	/* -transition: background-color 0.1s ease-in-out; */ /* wyłączone bo powoduje miganie strony przy przełączaniu pomiędzy stronami */
+}

@@ -1,0 +1,125 @@
+/* ?view=personal */
+.personal {
+	width: fit-content;
+	height: fit-content;
+	background-color: var(--color-table-a);
+	padding: 0px;
+}
+
+.personal tr:nth-of-type(even) {
+	background-color: var(--color-table-b);
+}
+
+.personal td, .personal th {
+	padding: 5px 15px;
+}
+
+.personal th, .personal td {
+	text-align: left;
+	padding-right: 3rem;
+}
+
+/* ?view=  */
+aside.menu {
+	width: 200px;
+	background-color: var(--color-aside);
+	/* border: 1px solid black;
+	border-left: none;
+	border-right: none; */
+}
+
+.dashboard-container.nopadding {
+	padding: 0;
+	gap: 0;
+}
+
+/* ?view=attendance */
+.choose-wide {
+	width: 100%;
+	height: calc(1.5rem + 4px) !important;
+	padding: 4px 10px;
+	background-color: #eee;
+	border: 1px solid #aaa;
+}
+
+table.attendance {
+	text-align: left;
+	border-collapse: collapse;
+	border: 1px solid #aaa;
+}
+
+table.attendance th, table.attendance td {
+	padding: 2px 10px;
+	border: 1px solid #aaa;
+}
+
+table.attendance tr {
+	background-color: #f0f0f0;
+}
+
+table.attendance tr:nth-child(odd) {
+	background-color: #eee;
+}
+
+table.attendance tr th:first-of-type {
+	width: 40px;
+}
+
+table.attendance tr th:last-of-type {
+	width: 100px;
+}
+
+/* ?view=students */
+div.table-container {
+	width: 100%;
+}
+
+table.students {
+	width: 100%;
+	max-width: 800px;
+	text-align: left;
+	background-color: var(--color-table-a);
+}
+
+table.students tr {
+	height: 1.5rem;
+}
+
+table.students tr:nth-of-type(odd) {
+	background-color: var(--color-table-b);
+}
+
+table.students th, table.students td {
+	padding: 4px 6px;
+}
+
+table.students tr th:first-of-type,
+table.students tr td:first-of-type {
+	width: 40px;
+}
+
+table.students tr th:last-of-type,
+table.students tr td:last-of-type {
+	width: 80px;
+}
+
+td[colspan="3"] {
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	table.students {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.dashboard-container:has(table.students) {
+		width: 100%;
+	}
+
+	aside.menu {
+		width: calc(100% - 40px) !important;
+		margin-top: 20px;
+	}
+
+}
